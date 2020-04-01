@@ -1,0 +1,9 @@
+<h1><%= @article.title %></h1>
+<textarea id="w3mission" rows="4" cols="50">
+  <%= @article.content %>
+</textarea>
+
+<form method="post" action="/articles/<%= @article.id %>">
+      <input id="hidden" type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="delete">
+  </form>
